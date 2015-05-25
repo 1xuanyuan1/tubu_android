@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   
+    <color name="color_white">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent2">#88000000</color>
+	<color name="white">#FFFFFF</color>
+	<color name="black">#000000</color>
+	<color name="red">#FF0000</color>
+	<color name="green">#21C064</color>
+	<color name="blue">#9abcdf</color>
+	<color name="bg_green">#94da6a</color>
+	<color name="yellow">#FFFF00</color>
+	<color name="gray1">#F9F9F9</color>
+	<color name="gray2">#E7E7E7</color>
+	<color name="gray3">#C3C3C3</color>
+	<color name="gray">#A7A7A7</color>
+	<color name="pink">#FFA6C1</color>
+	<color name="bg">#515151</color>
+	<color name="orange">#FF9900</color>
+	<color name="orange1">#E95513</color>
+	<color name="bubble_text_color">#5B5A5B</color>
+	<color name="dialog_textcolor">#A5ADB5</color>
+	
+	<!-- 二维码颜色  -->
+	<color name="result_view">#b0000000</color>
+	<color name="possible_result_points">#c0ffff00</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+</resources>

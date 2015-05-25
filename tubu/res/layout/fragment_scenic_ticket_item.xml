@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent" >
+	<RelativeLayout 
+	    android:id="@+id/scenic_ticket_rl"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@color/transparent"
+	    android:padding="10dp"
+	    >
+	    <ImageView 
+	        android:id="@+id/scenic_ticket_image"
+	        style="@style/image_style"
+	        android:layout_width="80dp"
+	        android:layout_height="80dp"
+	        android:layout_marginRight="10dp"
+	        android:contentDescription="@string/app_name"
+	        />
+	    <TextView
+		    android:id="@+id/scenic_ticket_name"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_toRightOf="@id/scenic_ticket_image"
+		    android:textSize="@dimen/text_size_middle"
+		    />
+	    <TextView 
+	        android:id="@+id/scenic_ticket_price"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_toRightOf="@id/scenic_ticket_image"
+		    android:layout_marginTop="5dp"
+		    android:layout_below="@id/scenic_ticket_name"
+		    android:textColor="@color/red"
+		    android:textSize="@dimen/text_size_middle"
+	        />
+
+	    <Button
+	        android:id="@+id/scenic_ticket_bt"
+	        style="@style/button_style"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:layout_marginRight="29dp"
+	        android:text="@string/scenic_ticket_buy" />
+
+	</RelativeLayout>
+</RelativeLayout>

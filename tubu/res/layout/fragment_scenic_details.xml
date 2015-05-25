@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true" >
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/main_title_style"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/order_list_title" />
+
+    <RelativeLayout
+        android:id="@+id/scenic_ticket_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:background="@color/transparent" >
+
+        <RelativeLayout
+            android:id="@+id/scenic_ticket_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent" >
+
+            <ImageView
+                android:id="@+id/scenic_ticket_image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/transparent2"
+                android:drawableLeft="@drawable/attention"
+                android:text="@string/scenic_attention"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:padding="3dp"
+                android:text="@string/scenic_walk"
+                android:textColor="@color/white"
+                android:background="@drawable/bt_red"
+                android:textSize="@dimen/text_size_small" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scenic_ticket_image"
+                android:background="@color/transparent" >
+
+                <TextView
+                    android:id="@+id/scenic_ticket_name"
+                    style="@style/text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="雁荡山"
+                    android:textSize="@dimen/text_size_middle" />
+
+                <TextView
+                    android:id="@+id/scenic_ticket_subtitle"
+                    style="@style/text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/scenic_ticket_name"
+                    android:layout_toRightOf="@id/scenic_ticket_name"
+                    android:text="AAAA景区"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_size_small" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/scenic_ticket_head"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray2" />
+
+        <RadioGroup
+            android:id="@+id/scenic_ticket_rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line1"
+            android:checkedButton="@+id/scenic_ticket_intro"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <RadioButton
+                android:id="@+id/scenic_ticket_intro"
+                style="@style/rb_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/scenic_intro" />
+
+            <RadioButton
+                android:id="@+id/scenic_ticket_list"
+                style="@style/rb_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:text="@string/scenic_buy" />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/scenic_ticket_rg"
+            android:background="@color/gray2" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/scenic_ticket_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/line2" />
+    </RelativeLayout>
+
+</RelativeLayout>

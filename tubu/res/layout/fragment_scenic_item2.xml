@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent" >
+
+    <RelativeLayout
+        android:id="@+id/scenic_item_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/scenic_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:padding="5dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/transparent2"
+            android:drawableLeft="@drawable/attention"
+            android:text="@string/scenic_attention"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small3" />
+
+        <TextView
+            android:id="@+id/scenic_item_name"
+            style="@style/text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/scenic_item_image"
+            android:background="@color/transparent2"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:layout_margin="5dp"
+            android:text="@string/scenic_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_middle" />
+
+        <TextView
+            android:id="@+id/scenic_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scenic_item_image"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingTop="20dp"
+            android:text="@string/scenic_address"
+            android:textSize="@dimen/text_size_small2" />
+
+        <LinearLayout
+            android:id="@+id/scenic_purchase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/scenic_address"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scenic_purchase"
+                android:textSize="@dimen/text_size_small2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scenic_purchase_num"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size_small2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scenic_purchase_person"
+                android:textSize="@dimen/text_size_small2" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/scenic_purchase"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/gray2" />
+
+        <RelativeLayout
+            android:id="@+id/scenic_rl_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/line"
+            android:layout_marginRight="30dp"
+            android:padding="2dp" >
+
+            <TextView
+                android:id="@+id/scenic_item_price_tv"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/scenic_item_price_discount_price_rl"
+                android:paddingBottom="3dp"
+                android:text="@string/money"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/scenic_item_price"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/scenic_item_price_discount_price_rl"
+                android:layout_toRightOf="@+id/scenic_item_price_tv"
+                android:text="340"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size_big" />
+
+            <TextView
+                android:id="@+id/scenic_item_price_discount"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/scenic_item_price"
+                android:background="@color/red"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="8.5折"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small3" />
+
+            <RelativeLayout
+                android:id="@+id/scenic_item_price_discount_price_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/price_line"
+                android:layout_alignLeft="@id/scenic_item_price_discount"
+                android:layout_below="@id/scenic_item_price_discount" >
+
+                <TextView
+                    android:id="@+id/scenic_item_price_discount_price_tv"
+                    style="@style/text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:text="@string/money"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_small2" />
+
+                <TextView
+                    android:id="@+id/scenic_item_price_discount_price"
+                    style="@style/text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/scenic_item_price_discount_price_tv"
+                    android:text="400"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_middle" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

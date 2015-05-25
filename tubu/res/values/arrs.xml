@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 感情状态 -->
+    <string-array name="affective_state">
+        <item >保密</item>
+        <item >单身</item>
+        <item >恋爱中</item>
+        <item >已婚</item>
+        <item >同性</item>
+    </string-array>
+    <!-- 运动 -->
+    <string-array name="exercise">
+        <item>游泳</item>
+        <item>跑步</item>
+        <item>单车</item>
+        <item>瑜伽</item>
+        <item>篮球</item>
+        <item>足球</item>
+        <item>滑板</item>
+        <item>滑雪</item>
+        <item>乒乓球</item>
+        <item>羽毛球</item>
+        <item>网球</item>
+        <item>高尔夫</item>
+        <item>台球</item>
+        <item>舞蹈</item>
+        <item>街舞</item>
+        <item>健身房</item>
+        <item>射箭</item>
+        <item>击剑</item>
+        <item>射击</item>
+        <item>拳击</item>
+        <item>跆拳道</item>
+        <item>爬山</item>
+        <item>骑马</item>
+        <item>郊游</item>
+        <item>暴走</item>
+        <item>睡觉</item>
+    </string-array>
+</resources>

@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/transparent" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@color/transparent" >
+
+        <Button
+            android:id="@+id/showlist"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/scenic_list_bg" />
+
+        <ListView
+            android:id="@+id/scenic_list"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/showlist"
+            android:divider="@color/transparent"
+            android:dividerHeight="3dp"
+            android:listSelector="@color/transparent"
+            android:scrollbars="none"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

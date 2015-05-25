@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true" >
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/main_title_style"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/order_list_title" />
+	<RelativeLayout 
+	    android:id="@+id/line1"
+	    android:layout_width="match_parent"
+	    android:layout_height="1dp"
+	    android:background="@color/black"
+	    android:layout_below="@+id/title"
+	    />
+    <RadioGroup
+        android:id="@+id/scenic_order_rg"
+        android:layout_below="@id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:checkedButton="@+id/scenic_order_all"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/scenic_order_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+			style="@style/rb_style"            
+            android:text="@string/order_list_all" />
+
+        <RadioButton
+            android:id="@+id/scenic_order_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/rb_style"
+            android:text="@string/order_list_no" />
+
+        <RadioButton
+            android:id="@+id/scenic_order_done"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/rb_style"
+            android:text="@string/order_list_done" />
+    </RadioGroup>
+	<RelativeLayout 
+	    android:id="@+id/line2"
+	    android:layout_width="match_parent"
+	    android:layout_height="1dp"
+	    android:background="@color/black"
+	    android:layout_below="@+id/scenic_order_rg"
+	    />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/scenic_order_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line2" />
+
+</RelativeLayout>

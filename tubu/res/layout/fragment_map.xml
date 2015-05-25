@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent" >
+
+        <LinearLayout
+            android:id="@+id/map_foot_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/transparent"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/map_bt_simulate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/map_bt_simulate"
+                android:textSize="@dimen/text_size_middle" />
+            <Button
+                android:id="@+id/map_bt_real"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/map_bt_real"
+                android:textSize="@dimen/text_size_middle" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/mapview_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/map_foot_ll" >
+        </FrameLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

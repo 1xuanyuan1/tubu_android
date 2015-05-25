@@ -1,0 +1,140 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    
+     <style name="text_map_filter">
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:layout_marginLeft">@dimen/space_mini</item>
+    </style>
+    
+	<!-- 弹窗样式 -->
+    <style name="dialog_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 模糊 -->
+    </style>
+    <!-- 文字样式 -->
+    <style name="text_style" parent="@android:style/TextAppearance.Widget.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!-- 图片样式 -->
+    <style name="image_style">
+        <item name="android:background">@drawable/image</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:padding">8dp</item>
+    </style>
+    <!-- 图片按钮样式 -->
+    <style name="image_button_style">
+        <item name="android:padding">5dp</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:scaleType">fitStart</item>
+    </style>
+    <!-- 按钮样式 -->
+    <style name="button_style">
+	    <item name="android:textColor">@color/black</item>
+	    <item name="android:textSize">@dimen/text_size_middle</item>
+	    <item name="android:background">@drawable/bt_bg</item>
+	    <item name="android:padding">10dp</item>
+	</style>
+	<!-- 多列表背景 -->
+	<style name="list_bg_style">
+	    <item name="android:background">@drawable/list_bg</item>
+	    <item name="android:padding">5dp</item>
+	</style>
+	<!-- 标题文字样式 -->
+    <style name="title_text_style" parent="@android:style/TextAppearance.Widget.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_middle</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!-- 灰色字体样式 -->
+    <style name="gray_text_style" parent="@android:style/TextAppearance.Widget.TextView">
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!-- 主要标题 -->
+    <style name="main_title_style" parent="@android:style/TextAppearance.Widget.TextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/blue</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_big</item>
+    </style>
+    <style name="rb_style">
+		<item name="android:button">@null</item> 
+		<item name="android:gravity">center</item> 
+		<item name="android:textColor">@drawable/bt_color</item>     
+    </style>
+    
+    <style name="scenic_rb_style">
+		<item name="android:button">@null</item> 
+		<item name="android:gravity">center</item> 
+		<item name="android:textColor">@drawable/rb_color</item>     
+    </style>
+    <style name="rb_line_style">
+		<item name="android:button">@null</item> 
+		<item name="android:textColor">@color/gray3</item>
+    </style>
+    <!-- 文字样式 -->
+    <style name="list_text_style">
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_middle</item>
+    </style>
+    <!-- 红色文字样式 -->
+    <style name="text_red_style">
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">@dimen/text_size_middle</item>
+    </style>
+    <!-- 绿色按钮 -->
+    <style name="buttn_green_style">
+        <item name="android:background">@drawable/bt_green</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">@dimen/text_size_middle</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!-- 白色按钮 -->
+    <style name="buttn_white_style">
+        <item name="android:background">@drawable/bt_white</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">@dimen/text_size_middle</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <!-- 年龄-女性 -->
+    <style name="age_female_style">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/bt_female</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

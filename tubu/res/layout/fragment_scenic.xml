@@ -1,0 +1,291 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray2"
+    android:clickable="true" >
+
+    <include
+        android:id="@+id/main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/fragment_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_title"
+        android:background="@color/transparent"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent" >
+
+            <!--
+            <ImageButton
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/app_name"
+                android:paddingLeft="10dp"
+                android:src="@drawable/bt_back" />
+
+            <SearchView
+                android:id="@+id/search_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:iconifiedByDefault="true"
+                android:imeOptions="actionSearch"
+                android:inputType="textCapWords"
+                android:queryHint="搜索" />            -->
+
+            <RelativeLayout
+                android:id="@+id/scenic_head"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/scenic_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+
+                <RadioGroup
+                    android:id="@+id/scenic_head_rg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:checkedButton="@+id/main_head_rb1"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/main_head_rb1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:button="@drawable/rb_point" />
+
+                    <RadioButton
+                        android:id="@+id/main_head_rb2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:button="@drawable/rb_point" />
+
+                    <RadioButton
+                        android:id="@+id/main_head_rb3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:button="@drawable/rb_point" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/secnic_place_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scenic_head"
+                android:background="@color/gray2"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/secnic_place_yj"
+                    style="@style/list_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="@string/secnic_place_yj" />
+
+                <TextView
+                    android:id="@+id/secnic_place_yq"
+                    style="@style/list_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="@string/secnic_place_yq" />
+
+                <TextView
+                    android:id="@+id/secnic_place_dt"
+                    style="@style/list_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="@string/secnic_place_dt" />
+
+                <TextView
+                    android:id="@+id/secnic_place_wc"
+                    style="@style/list_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="@string/secnic_place_wc" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/scenic_place_recommend_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secnic_place_ll"
+                android:padding="5dp"
+                android:text="@string/scenic_place_recommend"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/scenic_place_recommend_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scenic_place_recommend_tv"
+                android:background="@color/white"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/scenic_item_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/image1" />
+
+                    <TextView
+                        android:id="@+id/scenic_item_name"
+                        style="@style/text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/scenic_item_image"
+                        android:background="@color/transparent2"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/scenic_name"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_small" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/scenic_item_image2"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/image2" />
+
+                    <TextView
+                        android:id="@+id/scenic_item_name2"
+                        style="@style/text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/scenic_item_image2"
+                        android:background="@color/transparent2"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/scenic_place_scenic"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_small" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/scenic_place_rg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scenic_place_recommend_ll"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:checkedButton="@+id/scenic_place_nearby"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp" >
+
+                <RadioButton
+                    android:id="@+id/scenic_place_nearby"
+                    style="@style/rb_line_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/scenic_place_nearby" />
+
+                <RadioButton
+                    android:id="@+id/scenic_place_where"
+                    style="@style/rb_line_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:text="@string/scenic_place_where" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/scenic_place_rg1"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_below="@id/scenic_place_rg"
+                android:background="@color/white"
+                android:checkedButton="@+id/scenic_place_nearby1"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp" >
+
+                <RadioButton
+                    android:id="@+id/scenic_place_nearby1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rb_line"
+                    android:button="@null" />
+
+                <RadioButton
+                    android:id="@+id/scenic_place_where2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rb_line"
+                    android:button="@null" />
+            </RadioGroup>
+
+            <com.qms.tubu.view.MyListView
+                android:id="@+id/scenic_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/scenic_place_rg1"
+                android:background="@color/gray2"
+                android:divider="@color/gray2"
+                android:dividerHeight="1dp"
+                android:scrollbars="none" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

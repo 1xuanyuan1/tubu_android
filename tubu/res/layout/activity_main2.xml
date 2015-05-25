@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qms.tubu.activity.MainActivity" >
+    <RadioGroup
+        android:id="@+id/main_rg_foot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:checkedButton="@+id/main_rb_foot_main"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/main_rb_foot_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bt_order"
+            android:button="@null"
+            android:contentDescription="@string/app_name" />
+
+        <RadioButton
+            android:id="@+id/main_rb_foot_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bt_search"
+            android:button="@null"
+            android:contentDescription="@string/app_name" />
+
+        <RadioButton
+            android:id="@+id/main_rb_foot_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bt_main"
+            android:button="@null"
+            android:contentDescription="@string/app_name" />
+
+        <RadioButton
+            android:id="@+id/main_rb_foot_map"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bt_map"
+            android:button="@null"
+            android:contentDescription="@string/app_name" />
+
+        <RadioButton
+            android:id="@+id/main_rb_foot_my"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bt_my"
+            android:button="@null"
+            android:contentDescription="@string/app_name" />
+    </RadioGroup>
+    <RelativeLayout 
+        android:id="@+id/main_line"
+        android:layout_above="@+id/main_rg_foot"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        />
+    <TextView 
+        android:id="@+id/main_title"
+        android:background="@color/orange1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+	<FrameLayout
+        android:id="@+id/main_fl"
+        android:layout_above="@+id/main_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+	
+</RelativeLayout>
